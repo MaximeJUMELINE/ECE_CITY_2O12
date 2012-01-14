@@ -1,0 +1,37 @@
+# depslib dependency file v1.0
+1326536507 source:c:\users\administrateur\desktop\ece_city\map\pattern_controller.c
+	"../headers/libraries.h"
+	"../headers/defined.h"
+	"../headers/structures.h"
+	"../headers/ece_city.h"
+
+1326535168 c:\users\administrateur\desktop\ece_city\headers\libraries.h
+	<allegro.h>
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
+1326535168 c:\users\administrateur\desktop\ece_city\headers\defined.h
+
+1326536234 c:\users\administrateur\desktop\ece_city\headers\structures.h
+
+1326536234 c:\users\administrateur\desktop\ece_city\headers\ece_city.h
+
+1326536559 source:c:\users\administrateur\desktop\ece_city\utilities\utilities.c
+	"../headers/libraries.h"
+	"../headers/defined.h"
+	"../headers/structures.h"
+	"../headers/ece_city.h"
+
+1326536729 source:c:\users\administrateur\desktop\ece_city\init\init.c
+	"../headers/libraries.h"
+	"../headers/defined.h"
+	"../headers/structures.h"
+	"../headers/ece_city.h"
+
+1326536234 source:c:\users\administrateur\desktop\ece_city\main.c
+	"headers/libraries.h"
+	"headers/defined.h"
+	"headers/structures.h"
+	"headers/ece_city.h"
+
