@@ -14,6 +14,9 @@
     GRAPHIQUE DU PROJET.
 **/
 
+#define WINDOW_W 800
+#define WINDOW_H 600
+
 #define PA_W 700
 #define PA_H 580
 
@@ -26,5 +29,8 @@
 
 #define LOS_W 16    // Losange
 #define LOS_H 10
+
+/// Pour l'esprit, on crée le type BOOL, qui agira comme un booléen (1 octet au lieu de 4 pour l'int) et qui est plus joli que char...
+typedef char BOOL;
 
 #endif // DEFINED_H_INCLUDED

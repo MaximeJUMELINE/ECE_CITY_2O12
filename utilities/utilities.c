@@ -29,6 +29,22 @@ BITMAP* jg_create_bitmap(int width, int height) {
     return tmp;
 }
 
+/*************************************************
+CHARGEMENT SÉCURISÉ DE BITMAP À PARTIR D'UNE IMAGE
+*************************************************/
+BITMAP* jg_load_bitmap(const char *path) {
+    // Chargement standard de la bitmap
+    BITMAP *bmp = load_bitmap(path, NULL);
+
+    // Test : la création a-t-elle réussi ?
+    if (!bmp) {
+        allegro_message("Creation de la BITMAP a partir du fichier %s impossible...ABORTING NOW!", path);
+        allegro_exit();
+        exit(EXIT_FAILURE);
+    }
+
+    return bmp;
+}
 
 /******************************
 ALLOCATION SÉCURISÉE DE MÉMOIRE
@@ -46,3 +62,11 @@ void* jg_malloc(size_t size) {
 
     return pt;
 }
+
+/**************************************
+AFFICHAGE À L'ÉCRAN DE LA BITMAP BUFFER
+**************************************/
+void jg_display_all(_generale *g) {
+    blit(g->buffer, screen, 0, 0, 0, 0, SCREEN_W, SCREEN_H);
+}
+

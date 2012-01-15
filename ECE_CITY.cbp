@@ -12,8 +12,14 @@
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
+					<Add option="-O3" />
+					<Add option="-Wextra" />
+					<Add option="-Wall" />
 					<Add option="-g" />
 				</Compiler>
+				<Linker>
+					<Add library="alleg" />
+				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin\Release\ECE_CITY" prefix_auto="1" extension_auto="1" />
@@ -31,7 +37,29 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="headers\defined.h" />
+		<Unit filename="headers\ece_city.h" />
+		<Unit filename="headers\libraries.h" />
+		<Unit filename="headers\structures.h" />
+		<Unit filename="init\init.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="map\menu_controller.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="map\pattern_controller.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="map\toolbox_controller.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="utilities\load_data.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="utilities\utilities.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions>
