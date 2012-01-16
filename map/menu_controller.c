@@ -1,7 +1,7 @@
 /**
     ECE_CITY 2012
     menu_controller.c
-    © Jean Guyomarc'h — Maxime Jumeline — Xavier Brun
+    ï¿½ Jean Guyomarc'h ï¿½ Maxime Jumelineï¿½ï¿½ Xavier Brun
 **/
 
 #include "../headers/libraries.h"
@@ -14,10 +14,10 @@ AFFICHE LE COMPORTEMENT DU MENU EN FONCTION DES MOUVEMENTS DE LA SOURIS
 **********************************************************************/
 void jg_menu_controller(_generale *g) {
     /**
-        AFFICHAGE DES MENUS DÉROULANTS (MAIS SANS LA PERSITANCE DE L'EXPLORATION)
+        AFFICHAGE DES MENUS Dï¿½ROULANTS (MAIS SANS LA PERSITANCE DE L'EXPLORATION)
     **/
 
-    // Si on survole « Retour au menu »
+    // Si on survole ï¿½ Retour au menu ï¿½
     if (mouse_x >= 45 && mouse_x < 103 && mouse_y >= 0 && mouse_y <= 21) {
         if (g->m->onClick != 41) {
             g->m->canClickOnMenu = 6;
@@ -28,7 +28,7 @@ void jg_menu_controller(_generale *g) {
         }
     }
 
-    // Si on survole « Fichier »
+    // Si on survole ï¿½ Fichier ï¿½
     else if (mouse_x >= 103 && mouse_x < 166 && mouse_y >= 0 && mouse_y <= 21) {
         if (g->m->onClick != 42) {
             g->m->canClickOnMenu = 1;
@@ -39,7 +39,7 @@ void jg_menu_controller(_generale *g) {
         }
     }
 
-    // Si on survole « Vitesse »
+    // Si on survole ï¿½ Vitesse ï¿½
     else if (mouse_x >= 166 && mouse_x < 240 && mouse_y >= 0 && mouse_y <= 21) {
         if (g->m->onClick != 43) {
             g->m->canClickOnMenu = 2;
@@ -50,7 +50,7 @@ void jg_menu_controller(_generale *g) {
         }
     }
 
-    // Si on survole « Options »
+    // Si on survole ï¿½ Options ï¿½
     else if (mouse_x >= 240 && mouse_x < 310 && mouse_y >= 0 && mouse_y <= 21) {
         if (g->m->onClick != 44) {
             g->m->canClickOnMenu = 3;
@@ -204,6 +204,18 @@ void jg_draw_menu(_generale *g) {
 
 void jg_display_menu(_generale *g) {
     draw_sprite(g->buffer, g->m->menubuffer, 0, 0);
+}
+
+void mj_display_info(_generale *g) {
+
+}
+
+void mj_display_load(_generale *g) {
+
+}
+
+void mj_display_save(_generale *g) {
+
 }
 
 
