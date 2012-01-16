@@ -1,7 +1,7 @@
 /**
     ECE_CITY 2012
     structures.h
-    © Jean Guyomarc'h — Maxime Jumeline — Xavier Brun
+    ï¿½ Jean Guyomarc'h ï¿½ Maxime Jumelineï¿½ï¿½ Xavier Brun
 **/
 
 #ifndef STRUCTURES_H_INCLUDED
@@ -9,18 +9,18 @@
 
 
 /**
-    CE FICHIER CONTIENT L'INTÉGRALITÉ DES STRUCTURES
-    UTILISÉES DANS LE PROJET.
-    LE TYPE « BOOL » A ÉTÉ DÉFINI DANS DEFINED.H
+    CE FICHIER CONTIENT L'INTï¿½GRALITï¿½ DES STRUCTURES
+    UTILISï¿½ES DANS LE PROJET.
+    LE TYPE ï¿½ BOOL ï¿½ A ï¿½Tï¿½ Dï¿½FINI DANS DEFINED.H
 **/
 
 
 /********************************************************
-STRUCTURE QUI CONTRÔLE LE SCROLLING ET LE ZOOM DU TERRAIN
+STRUCTURE QUI CONTRï¿½LE LE SCROLLING ET LE ZOOM DU TERRAIN
 ********************************************************/
 typedef struct structure_view_controller {
     int scroll_x;           // Facteur de scroll en abscisses
-    int scroll_y;           // Facteur de scroll en ordonnées
+    int scroll_y;           // Facteur de scroll en ordonnï¿½es
     int zoom;               // Facteur de zoom
 } _viewController;
 
@@ -31,10 +31,10 @@ STRUCTURE DU MENU
 typedef struct structure_menu {
     BITMAP *menubuffer;     // Buffer pour le menu
     BITMAP *menu;           // La barre des menus
-    BITMAP *menu0;          // Quand « Menu » est survolé
-    BITMAP *menu1;          // Quand « Fichier » est survolé
-    BITMAP *menu2;          // Quand « Vitesses » est survolé
-    BITMAP *menu3;          // Quand « Options » est survolé
+    BITMAP *menu0;          // Quand ï¿½ Menu ï¿½ est survolï¿½
+    BITMAP *menu1;          // Quand ï¿½ Fichier ï¿½ est survolï¿½
+    BITMAP *menu2;          // Quand ï¿½ Vitesses ï¿½ est survolï¿½
+    BITMAP *menu3;          // Quand ï¿½ Options ï¿½ est survolï¿½
     BITMAP *menu1_0;        // Nouvelle ville
     BITMAP *menu1_1;        // Charger ville
     BITMAP *menu1_2;        // Sauvegarde ville
@@ -43,14 +43,14 @@ typedef struct structure_menu {
     BITMAP *menu2_0;        // Pause
     BITMAP *menu2_1;        // Tortue
     BITMAP *menu2_2;        // Lama
-    BITMAP *menu2_3;        // Guépard
+    BITMAP *menu2_3;        // Guï¿½pard
     BITMAP *menu3_0;        // Effets sonores
     BITMAP *menu3_1;        // Musiques
-    BITMAP *check_on;       // Est sélectionné, et non survolé
-    BITMAP *check_off;      // Est sélectionné, et survolé
+    BITMAP *check_on;       // Est sï¿½lectionnï¿½, et non survolï¿½
+    BITMAP *check_off;      // Est sï¿½lectionnï¿½, et survolï¿½
 
-    BOOL canClickOnMenu;    // Si on peut cliquer sur un menu défilant
-    BOOL onClick;           // Si on vient juste d'entrer dans une zone spéciale
+    BOOL canClickOnMenu;    // Si on peut cliquer sur un menu dï¿½filant
+    BOOL onClick;           // Si on vient juste d'entrer dans une zone spï¿½ciale
 } _menu;
 
 
@@ -58,24 +58,24 @@ typedef struct structure_menu {
 STRUCTURE DE LA TOOLBOX
 **********************/
 typedef struct structure_toolbox {
-    /// Caractéristiques
-    BITMAP *toolbox;          // La BITMAP de la boîte à outils
-    BITMAP *buffer;           // Buffer pour les opérations de superpositions
+    /// Caractï¿½ristiques
+    BITMAP *toolbox;          // La BITMAP de la boï¿½te ï¿½ outils
+    BITMAP *buffer;           // Buffer pour les opï¿½rations de superpositions
     int origin_x;             // Origine en X
     int origin_y;             // Origine en Y
-    BOOL isCatch;             // Drag&Drop de la fenêtre ?
+    BOOL isCatch;             // Drag&Drop de la fenï¿½tre ?
 
-    /// Icônes cliquées
+    /// Icï¿½nes cliquï¿½es
     BITMAP *scroll_up;        // Scroll vers le haut
     BITMAP *scroll_down;      // Scroll vers le bas
     BITMAP *scroll_right;     // Scroll vers la droite
     BITMAP *scroll_left;      // Scroll vers la gauche
-    BOOL onDeactivate;        // Retirer l'effet de clic des icônes de la barre
+    BOOL onDeactivate;        // Retirer l'effet de clic des icï¿½nes de la barre
 } _toolbox;
 
 
 /********************************
-STRUCTURE DE POLICE PERSONNALISÉE
+STRUCTURE DE POLICE PERSONNALISï¿½E
 ********************************/
 typedef struct structure_police {
     FONT *lucidaGrande;     // La police normale
@@ -92,17 +92,37 @@ typedef struct structure_tuiles {
     BITMAP *ground;
 } _tiles;
 
+/***************
+PAGE INFORMATION
+***************/
+typedef struct structure_info {
+    int origin_x;             // Origine en X
+    int origin_y;             // Origine en Y
+    BITMAP *page_info;        // Image du contenu de la page d'information
+} _info;
+
+/**********************************
+PAGE DE SAUVEGARDE OU DE CHARGEMENT
+**********************************/
+typedef struct structure_save_load {
+    int origin_x;             // Origine en X
+    int origin_y;             // Origine en Y
+
+} _save_load;
+
 /*************************************************************
 STRUCTURE GLOBALE QUI CONTIENT TOUTES LES INFORMATIONS VITALES
 *************************************************************/
 typedef struct structure_generale {
-    BITMAP *buffer;         // La BITMAP qui sera blittée sur l'écran, et qui est composée de chaque étape
+    BITMAP *buffer;         // La BITMAP qui sera blittï¿½e sur l'ï¿½cran, et qui est composï¿½e de chaque ï¿½tape
     BITMAP *map;            // Le terrain jouable
     _menu *m;               // Le menu et ses composantes
-    _viewController *c;     // Contrôleur du scroll et du zoom
+    _viewController *c;     // Contrï¿½leur du scroll et du zoom
     _toolbox *t;            // La toolbox
-    _font *font;            // La police personnalisée
+    _font *font;            // La police personnalisï¿½e
     _tiles *tiles;          // Les tuiles
+    _info *info;            // La page information
+    _save_load *sl_page     // La page de chargement OU de sauvegarde (meme buffer)
 } _generale;
 
 #endif // STRUCTURES_H_INCLUDED
